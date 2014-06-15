@@ -1,0 +1,82 @@
+INSTRUCTIONS FOR USE THE SHINY APP: STATISTICAL PROCESS CONTROL FOR CONTINUOS VARIABLES
+========================================================
+
+## Instructions
+
+For use the app follow this steps:
+
+- Create a folder named "spc_app" (without quotes).
+
+- Inside the folder "spc_app", create a new folder called "data" (without quotes).
+
+-place the files ui.R and server.R, download the files from the repo:      
+
+-Inside the folder "data" copy the file called "dataspc.csv", this file is available in the 
+repo above.
+
+
+## Steps for use the app
+
+1 Insert the nominal value of the specification
+
+2 Insert the lower  specification limit
+
+3 Insert the upper specification limit
+
+4 Select the kind of chart, for subsamples >1 the (x,R) and (X,S) chart are available, for individual measures the IMR Chart is the unique option that display the graphic.
+
+5 Upload the file with the subsamples
+
+## Constrains
+
+The constrains of the app are the following:
+
+-The (x,r) and (x,s) chart are display only when the dataset input has more than one subsamples (more than one column).
+
+-The imr chart is displayed when is selected the option "IMR Chart" and the number of subsamples is one (one column)
+
+-Only is posible introduce datasets with a maximum of the 25 rows.
+
+-Only include the variables in the dataset, not include the enumeration of the samples in the header of the dataset.
+
+## Use of the App
+
+For use the app in the repo: link, is available two datasets, called "data_xr_xs.csv" and  "data_imr.csv".
+
+### (X,R) or (X,S) Chart
+
+Upload to the Aplication the file "data_xr_xs.csv" and select the options "(X,R) Chart" or "(X,S) Chart", when you select option the "IMR Chart" none graphic is displayed, because has more than one subsamples (more than one Columns).
+
+### IMR Chart
+
+Upload to the Aplication the file "data_imr.csv" and select the options "IMR Chart", when you select the options "(X,R) Chart" or "(X,S) Chart" none graphic is displayed, because has  one sample (one Column).
+
+
+## Example of data
+
+The data for graphic the (x,r) and (x,s) chart should look like:
+
+```{r}
+
+#Only include the variables in the dataset, not include the enumeration of the samples in the header of the dataset.
+
+data_xr_xs<-data.frame("X1"=c(21,32,34,43),"X2"=c(32,12,52,22))
+
+data_xr_xs
+
+```
+
+The data for graphic the imr chart should look like:
+
+```{r }
+#Only include the variables in the dataset, not include the enumeration of the samples in the header of the dataset.
+
+data_imr<-data.frame("X1"=c(21,32,34,43))
+
+data_imr
+
+```
+
+
+
+
