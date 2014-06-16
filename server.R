@@ -171,11 +171,11 @@ shinyServer(function(input,output){
   text<-reactive({  
 
      
-data.frame("Instructions"=c("Insert the nominal value of the specification",
+data.frame("Instructions"=c("Insert the nominal value of the specification (the value for default is for demonstration)",
                                                              "Insert the lower  specification limit (the value for default is for demonstration)",
                                                              "Insert the upper specification limit (the value for default is for demonstration)",
-                                                             "Select the kind of chart, for datasets with subsamples (colums) of size greater than 1 you should select the (x,R) or (X,S) chart, 
-                                                             for subsamples (colums) of size 1 you should select the IMR Chart",
+                                                             "Select the kind of chart, for datasets with subsamples (columns) of size greater than 1 you should select the (x,R) or (X,S) chart, 
+                                                             for subsamples (columns) of size 1 you should select the IMR Chart",
                                                              "Upload the file with the subsamples, a datasets with names: data_xr_xs and data_imr
                                                               are available in: https://github.com/Stevensct02/Application-of-data-products, for 
                                                               see a demonstration"))})
